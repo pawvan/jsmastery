@@ -1,0 +1,27 @@
+6. Hands-On Tasks
+Task 1: Sum Function
+
+Write a function that takes two numbers as arguments and returns their sum.
+Task 2: Multiply Function
+
+Write a function that takes two numbers as arguments and returns their product.
+Task 3: Implicit Return with Arrow Function
+
+Write an arrow function that takes two numbers and returns their sum in a single line.
+Task 4: Function as Argument
+
+Write a function processUserInput that accepts a callback function and a user input. It should process the input using the callback function.
+Task 5: Arrow Function with No Parameters
+
+Write an arrow function that logs "I am learning JavaScript!" to the console. It should not take any parameters.
+7. Common Interview Questions on Functions
+What is the difference between function declarations and function expressions?
+
+Function declarations are hoisted, while function expressions are not.
+What is the difference between this in regular functions and arrow functions?
+
+Regular functions have their own this, while arrow functions inherit this from the surrounding scope.
+What are closures in JavaScript?
+
+A closure is a function that "remembers" its lexical environment, meaning it has access to variables from the scope in which it was created, even after that scope has finished executing.
+
