@@ -1,0 +1,36 @@
+Conditionals
+If Statement
+The if statement runs code if a condition is true.
+  let x = 10;
+if (x > 5) {
+  console.log("x is greater than 5"); // This will run
+}
+
+Else Statement
+The else statement runs code if the if condition is false.
+  let x = 3;
+if (x > 5) {
+  console.log("x is greater than 5");
+} else {
+  console.log("x is less than or equal to 5"); // This will run
+}
+
+Else If Statement
+The else if statement checks multiple conditions.
+  let day = 3;
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday"); // This will run
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+
+
