@@ -1,0 +1,166 @@
+Here’s a focused guide on **Functions** in JavaScript, covering **function declarations**, **expressions**, and **arrow functions**. This guide is structured to help your junior understand the different types of functions and how to use them effectively.
+
+---
+
+### **1. Function Declarations**
+
+A **function declaration** defines a function with a specified name and block of code that performs a task.
+
+#### **Syntax:**
+```javascript
+function functionName(parameters) {
+  // Code to execute
+}
+```
+
+#### **Example:**
+```javascript
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Alice");  // Output: "Hello, Alice!"
+```
+
+#### **Key Points:**
+- Function declarations are hoisted, meaning you can call the function before it is defined in the code.
+  
+---
+
+### **2. Function Expressions**
+
+A **function expression** is a function defined as part of an expression. It can be anonymous (without a name) and is usually assigned to a variable.
+
+#### **Syntax:**
+```javascript
+const functionName = function(parameters) {
+  // Code to execute
+};
+```
+
+#### **Example:**
+```javascript
+const greet = function(name) {
+  console.log("Hello, " + name + "!");
+};
+
+greet("Bob");  // Output: "Hello, Bob!"
+```
+
+#### **Key Points:**
+- Function expressions are **not hoisted**. You must define the function before you call it.
+- Functions in expressions can be anonymous (i.e., without a name).
+  
+---
+
+### **3. Arrow Functions**
+
+**Arrow functions** are a shorter syntax for writing functions in JavaScript. They are introduced in ES6 and are often used for concise and simpler function definitions.
+
+#### **Syntax:**
+```javascript
+const functionName = (parameters) => {
+  // Code to execute
+};
+```
+
+If the function has only one parameter, the parentheses around the parameter are optional.
+
+**Example (with one parameter):**
+```javascript
+const greet = name => {
+  console.log("Hello, " + name + "!");
+};
+
+greet("Charlie");  // Output: "Hello, Charlie!"
+```
+
+**Example (with multiple parameters):**
+```javascript
+const add = (a, b) => {
+  return a + b;
+};
+
+console.log(add(5, 3));  // Output: 8
+```
+
+**Example (with implicit return for a single expression):**
+```javascript
+const add = (a, b) => a + b;
+
+console.log(add(5, 3));  // Output: 8
+```
+
+#### **Key Points:**
+- Arrow functions **do not have their own `this` context**. They inherit `this` from the surrounding code.
+- They are **not hoisted**, so you need to define them before calling them.
+
+---
+
+### **4. Function Parameters and Return Values**
+
+#### **Parameters:**
+- Functions can accept one or more parameters, which are variables that represent values passed to the function when it's called.
+
+**Example:**
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(5, 3));  // Output: 8
+```
+
+#### **Return Values:**
+- A function can return a value using the `return` statement. If no `return` is specified, the function returns `undefined`.
+
+**Example:**
+```javascript
+function multiply(a, b) {
+  return a * b;
+}
+
+let result = multiply(4, 2);
+console.log(result);  // Output: 8
+```
+
+---
+
+### **5. Functions as First-Class Citizens**
+
+In JavaScript, functions are **first-class citizens**, meaning they can be:
+- Assigned to variables
+- Passed as arguments to other functions
+- Returned from other functions
+
+#### **Example: Passing Functions as Arguments**
+```javascript
+function greet(name, callback) {
+  console.log("Hello, " + name + "!");
+  callback();
+}
+
+function farewell() {
+  console.log("Goodbye!");
+}
+
+greet("David", farewell);
+// Output:
+// Hello, David!
+// Goodbye!
+```
+
+#### **Example: Returning Functions from Functions**
+```javascript
+function createMultiplier(multiplier) {
+  return function(number) {
+    return number * multiplier;
+  };
+}
+
+const multiplyByTwo = createMultiplier(2);
+console.log(multiplyByTwo(5));  // Output: 10
+```
+
+---
+
