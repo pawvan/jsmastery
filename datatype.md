@@ -10,7 +10,6 @@ null: Represents an intentional absence of any value.
 Symbol: A unique identifier (less commonly used).
 Complex Type:
 Object: A collection of key-value pairs (properties).
-
 Example:
 
 let name = "Alice";     // String
